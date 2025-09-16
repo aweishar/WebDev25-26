@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-bold text-gray-900 rounded-md p-2 hover:bg-gray-100 transition-colors duration-200">Andrew Weishar</a>
+            <div class="space-x-4 flex">
+                <a href="#about" class="text-gray-600 hover:text-gray-900 transition-colors duration-200">About</a>
+                <a href="#projects" class="text-gray-600 hover:text-gray-900 transition-colors duration-200">Projects</a>
+                <a href="#skills" class="text-gray-600 hover:text-gray-900 transition-colors duration-200">Skills</a>
+                <a href="#contact" class="text-gray-600 hover:text-gray-900 transition-colors duration-200">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="py-20 md:py-32 text-center bg-white">
+        <div class="container mx-auto px-4">
+            <img src="https://placehold.co/150x150/e5e7eb/4b5563?text=Profile" alt="Profile Picture" class="w-36 h-36 md:w-40 md:h-40 rounded-full mx-auto mb-6 shadow-md object-cover border-4 border-gray-200">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-4">Hello, I'm Andrew Weishar</h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+                A passionate web developer with a knack for building beautiful and functional web applications. I love creating seamless user experiences and solving complex problems.
+            </p>
+            <a href="#contact" class="bg-indigo-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-700 transition-colors duration-300 transform hover:scale-105">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">About Me</h2>
+            <div class="max-w-4xl mx-auto text-center md:text-left">
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    I am a software engineer with over 5 years of experience specializing in front-end development. My journey began with a curiosity for how websites are built, which quickly grew into a passion for crafting elegant and efficient code. I have worked on a variety of projects, from small business websites to large-scale enterprise applications.
+                </p>
+                <p class="text-gray-700 leading-relaxed">
+                    My skills include a strong foundation in modern web technologies, a deep understanding of UI/UX principles, and a collaborative spirit. I am always eager to learn new things and embrace challenges to grow as a developer.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Projects</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1: Updated for Lights Out -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+                    <img src="https://placehold.co/600x400/e5e7eb/4b5563?text=Lights+Out" alt="Lights Out Game" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Lights Out</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            A classic puzzle game where you turn off all the lights. Clicking a tile flips its state and the state of its orthogonal neighbors. Can you solve it in the fewest moves?
+                        </p>
+                        <a href="lights_out_game.html" class="inline-block bg-indigo-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-indigo-600 transition-colors duration-300">Play Game</a>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+                    <img src="https://placehold.co/600x400/e5e7eb/4b5563?text=Project+2" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Project 2</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            A real-time chat application using WebSockets and Node.js. It features private messaging and group chats with emoji support.
+                        </p>
+                        <a href="#" class="inline-block bg-indigo-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-indigo-600 transition-colors duration-300">View Project</a>
+                    </div>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+                    <img src="https://placehold.co/600x400/e5e7eb/4b5563?text=Project+3" alt="Project 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Project 3</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            A data visualization dashboard built with D3.js. It visualizes complex datasets with interactive charts and graphs.
+                        </p>
+                        <a href="#" class="inline-block bg-indigo-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-indigo-600 transition-colors duration-300">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Skills</h2>
+            <div class="max-w-3xl mx-auto flex flex-wrap justify-center items-center gap-6">
+                <!-- Skills Icons/Items -->
+                <div class="bg-white rounded-full py-2 px-6 shadow-md text-gray-700 font-medium">HTML5</div>
+                <div class="bg-white rounded-full py-2 px-6 shadow-md text-gray-700 font-medium">CSS3</div>
+                <div class="bg-white rounded-full py-2 px-6 shadow-md text-gray-700 font-medium">JavaScript</div>
+                <div class="bg-white rounded-full py-2 px-6 shadow-md text-gray-700 font-medium">React</div>
+                <div class="bg-white rounded-full py-2 px-6 shadow-md text-gray-700 font-medium">Node.js</div>
+                <div class="bg-white rounded-full py-2 px-6 shadow-md text-gray-700 font-medium">Tailwind CSS</div>
+                <div class="bg-white rounded-full py-2 px-6 shadow-md text-gray-700 font-medium">Git</div>
+                <div class="bg-white rounded-full py-2 px-6 shadow-md text-gray-700 font-medium">Figma</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Get in Touch</h2>
+            <div class="max-w-md mx-auto bg-gray-50 rounded-xl p-8 shadow-lg">
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-gray-700 font-semibold mb-2">Name</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-indigo-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-700 transition-colors duration-300">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center text-sm text-gray-400">
+            <p>&copy; 2025 Andrew Weishar. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for smooth scrolling -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
