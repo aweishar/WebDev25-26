@@ -25,7 +25,6 @@
                 <a href="#about" class="text-gray-600 hover:text-gray-900 transition-colors duration-200">About</a>
                 <a href="#projects" class="text-gray-600 hover:text-gray-900 transition-colors duration-200">Projects</a>
                 <a href="#skills" class="text-gray-600 hover:text-gray-900 transition-colors duration-200">Skills</a>
-                <a href="#contact" class="text-gray-600 hover:text-gray-900 transition-colors duration-200">Contact</a>
             </div>
         </nav>
     </header>
@@ -37,7 +36,6 @@
             <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-8">
                 A "passionate web developer" with a knack for building beautiful and functional web applications. I love creating seamless user experiences and solving complex problems.
             </p>
-            <a href="#contact" class="bg-indigo-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-700 transition-colors duration-300 transform hover:scale-105">Get in Touch</a>
         </div>
     </section>
 
@@ -59,9 +57,20 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Projects</h2>
             
-            <!-- Honors '23-24 Section -->
-            <h3 class="text-2xl font-bold text-gray-900 mb-6 mt-12">Honors '23-24</h3>
+            <!-- Honors 23-24 Section -->
+            <h3 class="text-2xl font-bold text-gray-900 mb-6 mt-12">Honors 23-24</h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Pong -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+                    <img src="https://placehold.co/600x400/e5e7eb/4b5563?text=Pong" alt="Pong Game" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-2xl font-bold text-gray-900 mb-2">Pong</h4>
+                        <p class="text-gray-600 text-sm mb-4">
+                            A simple recreation of the classic arcade game Pong, built with HTML, CSS, and JavaScript. It features a two-player mode and score tracking.
+                        </p>
+                        <a href="#" class="inline-block bg-indigo-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-indigo-600 transition-colors duration-300">Play Game</a>
+                    </div>
+                </div>
                 <!-- Brick Breaker -->
                 <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
                     <img src="https://placehold.co/600x400/e5e7eb/4b5563?text=Brick+Breaker" alt="Brick Breaker Game" class="w-full h-48 object-cover">
@@ -86,8 +95,8 @@
                 </div>
             </div>
 
-            <!-- Advanced Placement '24-25 Section -->
-            <h3 class="text-2xl font-bold text-gray-900 mb-6">Advanced Placement '24-25</h3>
+            <!-- Advanced Placement 24-25 Section -->
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Advanced Placement 24-25</h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                 <!-- Snake -->
                 <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
@@ -95,7 +104,7 @@
                     <div class="p-6">
                         <h4 class="text-2xl font-bold text-gray-900 mb-2">Snake</h4>
                         <p class="text-gray-600 text-sm mb-4">
-                            A classic arcade game where you control a snake to eat food and grow, all while avoiding collisions with walls or your own tail.
+                            A classic arcade game where you control a snake to eat food and grow, all while avoiding collisions with walls or your own tail. 
                         </p>
                         <a href="#" class="inline-block bg-indigo-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-indigo-600 transition-colors duration-300">Play Game</a>
                     </div>
@@ -124,8 +133,8 @@
                 </div>
             </div>
 
-            <!-- Advanced Topics '25-26 Section -->
-            <h3 class="text-2xl font-bold text-gray-900 mb-6">Advanced Topics '25-26</h3>
+            <!-- Advanced Topics 25-26 Section -->
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Advanced Topics 25-26</h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Placeholder 1 -->
                 <div class="bg-gray-200 rounded-xl p-6 shadow-lg border-2 border-dashed border-gray-400">
@@ -157,29 +166,6 @@
         </div>
     </section>
 
-    <section id="contact" class="py-20 md:py-24 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Get in Touch</h2>
-            <div class="max-w-md mx-auto bg-gray-50 rounded-xl p-8 shadow-lg">
-                <form class="space-y-6">
-                    <div>
-                        <label for="name" class="block text-gray-700 font-semibold mb-2">Name</label>
-                        <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    </div>
-                    <div>
-                        <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
-                        <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    </div>
-                    <div>
-                        <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
-                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-indigo-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-700 transition-colors duration-300">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
     <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-4 text-center text-sm text-gray-400">
             <p>&copy; 2025 Andrew Weishar. All Rights Reserved.</p>
@@ -198,4 +184,3 @@
     </script>
 </body>
 </html>
- 
