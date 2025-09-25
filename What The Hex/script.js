@@ -3,7 +3,7 @@ const colorGridEl = document.getElementById('color-grid');
 const messageEl = document.getElementById('message');
 const difficultySelectorEl = document.getElementById('difficulty-selector');
 
-const difficultyLevels = [3, 4, 5, 6, 9, 12, 16, 25, 48];
+const difficultyLevels = [3, 4, 5, 6, 9, 12, 16, 25];
 let currentDifficulty = 6;
 let correctAnswer = '';
 let isGameActive = true;
