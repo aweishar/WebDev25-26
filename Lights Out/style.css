@@ -89,3 +89,8 @@ body {
 .win-state {
     background-color: green;
 }
+
+#bottom-menu {
+    justify-content: space-between;
+    padding: 0 20px;
+}
