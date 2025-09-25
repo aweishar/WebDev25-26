@@ -109,11 +109,4 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('easy-btn').addEventListener('click', () => resetGame('Easy', 3));
     document.getElementById('medium-btn').addEventListener('click', () => resetGame('Medium', 5));
     document.getElementById('hard-btn').addEventListener('click', () => resetGame('Hard', 7));
-    
-    document.getElementById('replay-btn').addEventListener('click', () => {
-        if (difficultySelected) {
-            const currentDifficulty = label.textContent.split(' ')[1] || 'Easy';
-            resetGame(currentDifficulty, movesToWin);
-        }
-    });
 });
