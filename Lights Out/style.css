@@ -101,7 +101,3 @@ body {
     text-align: center;   /* Centers the text within the label's expanded space */
     margin-right: 15px;   /* Adds a small gap next to the button */
 }
-
-#replay-btn {
-    flex-shrink: 0;       /* Prevents the button from ever being shrunk or squished */
-}
