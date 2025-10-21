@@ -8,10 +8,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* You can add any custom CSS here if needed, but Tailwind is handling most of it. */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
-<body class="antialiased">
+<body class="antialiased bg-white">
 
+    <!-- Header and Navigation -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
             <a href="#hero" class="text-2xl font-bold text-gray-900 rounded-md p-2 hover:bg-gray-100 transition-colors duration-200">Andrew Weishar</a>
@@ -23,6 +29,7 @@
         </nav>
     </header>
 
+    <!-- Hero Section -->
     <section id="hero" class="py-20 md:py-32 text-center bg-gray-50">
         <div class="container mx-auto px-4">
             <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-4">Hello, I'm Andrew Weishar</h1>
@@ -32,6 +39,7 @@
         </div>
     </section>
 
+    <!-- About Me Section -->
     <section id="about" class="py-20 md:py-24 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">About Me</h2>
@@ -46,6 +54,7 @@
         </div>
     </section>
     
+    <!-- Skills Section -->
     <section id="skills" class="py-20 md:py-24 bg-gray-50">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Skills</h2>
@@ -58,6 +67,7 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects" class="py-20 md:py-24 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Projects</h2>
@@ -150,15 +160,50 @@
                             A program that simplifies converting from one base to another.
                         </p>
                         <a href="Computer Number Systems/computernumbersystems.html" class="inline-block bg-indigo-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-indigo-600 transition-colors duration-300">Launch Converter</a>
-        </div>
-    </section>
+                    </div>
+                </div>
+                <!-- Arduino Project Card 1 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+                    <img src="https://placehold.co/600x400/00979C/FFFFFF?text=Arduino:+Dino+Jump" alt="Arduino Dino Jump Game" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-2xl font-bold text-gray-900 mb-2">Arduino: Dino Jump</h4>
+                        <p class="text-gray-600 text-sm mb-4">
+                            A basic dino jump game where you control a dinosaur character to jump over obstacles, all running on an Arduino.
+                        </p>
+                        <div class="flex flex-wrap gap-3 mt-4">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="inline-block bg-gray-700 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-gray-800 transition-colors duration-300">View Code</a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="inline-block bg-red-600 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-red-700 transition-colors duration-300">Watch Video</a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-blue-600 transition-colors duration-300">See Picture</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Arduino Project Card 2 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+                    <img src="https://placehold.co/600x400/00878F/FFFFFF?text=Arduino:+Binary" alt="Arduino Binary Converter" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-2xl font-bold text-gray-900 mb-2">Arduino: Binary</h4>
+                        <p class="text-gray-600 text-sm mb-4">
+                            A line of lights that displays binary numbers. It converts a base-10 number typed into a remote and shows the result using the LEDs.
+                        </p>
+                        <div class="flex flex-wrap gap-3 mt-4">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="inline-block bg-gray-700 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-gray-800 transition-colors duration-300">View Code</a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="inline-block bg-red-600 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-red-700 transition-colors duration-300">Watch Video</a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-blue-600 transition-colors duration-300">See Picture</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+        </div> <!-- This closes the main "container" div for the projects section -->
+    </section> <!-- This closes the "projects" section -->
+
+    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-4 text-center text-sm text-gray-400">
             <p>&copy; 2025 Andrew Weishar. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
+
