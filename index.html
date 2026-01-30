@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-
         body {
             font-family: 'Inter', sans-serif;
         }
@@ -45,6 +44,7 @@
                     I am a student whose progressed through all computer science courses offered at the high school level. My journey began with an interest in game development, which quickly grew into a passion for coding. I have worked on a variety of projects, from simple games, to more complex: applications, machine learning programs, Arduino modules, and even web development.
                 </p>
             </div>
+        </div>
     </section>
     
     <section id="skills" class="py-20 md:py-24 bg-gray-50">
@@ -66,155 +66,174 @@
             <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Projects</h2>
             
             <h3 class="text-2xl font-bold text-gray-900 mb-6 mt-12">Honors '23-24</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
-                    <img src="https://placehold.co/600x400/e5e7eb/4b5563?text=Brick+Breaker" alt="Brick Breaker Game" class="w-full h-48 object-cover">
-                    <div class="p-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col h-full">
+                    <img src="Images/BrickBreakerImage.png" alt="Brick Breaker Game" class="w-full h-96 object-cover bg-gray-200">
+                    <div class="p-6 flex flex-col flex-grow">
                         <h4 class="text-2xl font-bold text-gray-900 mb-2">Brick Breaker</h4>
-                        <p class="text-gray-600 text-sm mb-4">
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">
                             A nostalgic arcade-style game where players must break bricks by bouncing a ball off a paddle, but it has been frozen! Can you clear the board?
                         </p>
-                        <a href="Games/Brick Breaker/brickbreaker.html" class="inline-block bg-indigo-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-indigo-600 transition-colors duration-300">Play Game</a>
+                        <div class="mt-auto">
+                            <a href="Games/Brick Breaker/brickbreaker.html" class="inline-block bg-indigo-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-indigo-600 transition-colors duration-300">Play Game</a>
+                        </div>
                     </div>
                 </div>
-                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
-                    <img src="https://placehold.co/600x400/e5e7eb/4b5563?text=Space+Invaders" alt="Space Invaders Game" class="w-full h-48 object-cover">
-                    <div class="p-6">
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col h-full">
+                    <img src="Images/SpaceInvadersImage.png" alt="Space Invaders Game" class="w-full h-96 object-cover bg-gray-200">
+                    <div class="p-6 flex flex-col flex-grow">
                         <h4 class="text-2xl font-bold text-gray-900 mb-2">Space Invaders</h4>
-                        <p class="text-gray-600 text-sm mb-4">
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">
                             A remake of the classic arcade shooter, now in a titanic edition with enhanced features and challenging levels.
                         </p>
-                        <a href="Games/Space Invaders/spaceinvaders.html" class="inline-block bg-indigo-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-indigo-600 transition-colors duration-300">Play Game</a>
+                        <div class="mt-auto">
+                            <a href="Games/Space Invaders/spaceinvaders.html" class="inline-block bg-indigo-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-indigo-600 transition-colors duration-300">Play Game</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <h3 class="text-2xl font-bold text-gray-900 mb-6">Advanced Placement '24-25</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
-                    <img src="https://placehold.co/600x400/e5e7eb/4b5563?text=Snake" alt="Snake" class="w-full h-48 object-cover">
-                    <div class="p-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col h-full">
+                    <img src="Images/SnakeGameImage.png" alt="Snake" class="w-full h-96 object-cover bg-gray-200">
+                    <div class="p-6 flex flex-col flex-grow">
                         <h4 class="text-2xl font-bold text-gray-900 mb-2">Snake</h4>
-                        <p class="text-gray-600 text-sm mb-4">
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">
                             A classic arcade game where you control a snake to eat food and grow, all while avoiding collisions with walls or your own tail. 
                         </p>
-                        <a href="Games/Snake/snake.html" class="inline-block bg-indigo-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-indigo-600 transition-colors duration-300">Play Game</a>
+                        <div class="mt-auto">
+                            <a href="Games/Snake/snake.html" class="inline-block bg-indigo-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-indigo-600 transition-colors duration-300">Play Game</a>
+                        </div>
                     </div>
                 </div>
-                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
-                    <img src="https://placehold.co/600x400/e5e7eb/4b5563?text=2-Player+Snake" alt="2-Player Snake" class="w-full h-48 object-cover">
-                    <div class="p-6">
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col h-full">
+                    <img src="Images/2playerSnakeImage.png" alt="2-Player Snake" class="w-full h-96 object-cover bg-gray-200">
+                    <div class="p-6 flex flex-col flex-grow">
                         <h4 class="text-2xl font-bold text-gray-900 mb-2">2-Player Snake</h4>
-                        <p class="text-gray-600 text-sm mb-4">
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">
                             A two-player spin-off of the classic game. In this version, you must avoid the spoiled apples as you collaborate on beating your high score!
                         </p>
-                        <a href="Games/2-Player Snake/2playersnake.html" class="inline-block bg-indigo-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-indigo-600 transition-colors duration-300">Play Game</a>
+                        <div class="mt-auto">
+                            <a href="Games/2-Player Snake/2playersnake.html" class="inline-block bg-indigo-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-indigo-600 transition-colors duration-300">Play Game</a>
+                        </div>
                     </div>
                 </div>
-                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
-                    <img src="https://placehold.co/600x400/e5e7eb/4b5563?text=Disco+Jump" alt="Disco Jump Game" class="w-full h-48 object-cover">
-                    <div class="p-6">
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col h-full">
+                    <img src="Images/DiscoJumpImage.png" alt="Disco Jump Game" class="w-full h-96 object-cover bg-gray-200">
+                    <div class="p-6 flex flex-col flex-grow">
                         <h4 class="text-2xl font-bold text-gray-900 mb-2">Disco Jump</h4>
-                        <p class="text-gray-600 text-sm mb-4">
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">
                             A vibrant, high-energy arcade game where you jump from platform to platform, ascending higher and higher. It's a disco-themed version of the classic endless jumper game.
                         </p>
-                        <a href="Games/Disco Jump/discojump.html" class="inline-block bg-indigo-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-indigo-600 transition-colors duration-300">Play Game</a>
+                        <div class="mt-auto">
+                            <a href="Games/Disco Jump/discojump.html" class="inline-block bg-indigo-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-indigo-600 transition-colors duration-300">Play Game</a>
+                        </div>
                     </div>
                 </div>
-                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
-                    <img src="https://placehold.co/600x400/e5e7eb/4b5563?text=Lights+Out" alt="Lights Out Game" class="w-full h-48 object-cover">
-                    <div class="p-6">
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col h-full">
+                    <img src="Images/LightsOutImage.png" alt="Lights Out Game" class="w-full h-96 object-cover bg-gray-200">
+                    <div class="p-6 flex flex-col flex-grow">
                         <h4 class="text-2xl font-bold text-gray-900 mb-2">Lights Out</h4>
-                        <p class="text-gray-600 text-sm mb-4">
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">
                             A classic puzzle game where you turn off all the lights. Clicking a tile flips its state and the state of its orthogonal neighbors. Can you solve it in the fewest moves?
                         </p>
-                        <a href="Games/Lights Out/lightsout.html" class="inline-block bg-indigo-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-indigo-600 transition-colors duration-300">Play Game</a>
+                        <div class="mt-auto">
+                            <a href="Games/Lights Out/lightsout.html" class="inline-block bg-indigo-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-indigo-600 transition-colors duration-300">Play Game</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <h3 class="text-2xl font-bold text-gray-900 mb-6">Advanced Topics '25-26</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
-                    <img src="https://placehold.co/600x400/e5e7eb/4b5563?text=What+The+Hex?" alt="What The Hex?" class="w-full h-48 object-cover">
-                    <div class="p-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col h-full">
+                    <img src="Images/WhatTheHexImage.png" alt="What The Hex?" class="w-full h-96 object-cover bg-gray-200">
+                    <div class="p-6 flex flex-col flex-grow">
                         <h4 class="text-2xl font-bold text-gray-900 mb-2">What The Hex?</h4>
-                        <p class="text-gray-600 text-sm mb-4">
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">
                             A hex code color guessing game. 
                         </p>
-                        <a href="What The Hex/whatthehex.html" class="inline-block bg-indigo-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-indigo-600 transition-colors duration-300">Play Game</a>
+                        <div class="mt-auto">
+                            <a href="What The Hex/whatthehex.html" class="inline-block bg-indigo-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-indigo-600 transition-colors duration-300">Play Game</a>
+                        </div>
                     </div>
                 </div>
-                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
-                    <img src="https://placehold.co/600x400/e5e7eb/4b5563?text=Computer+Number+\nSystems" alt="Computer Number Systems" class="w-full h-48 object-cover">
-                    <div class="p-6">
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col h-full">
+                    <img src="Images/ComputerNumberSystemsImage.png" alt="Computer Number Systems" class="w-full h-96 object-cover bg-gray-200">
+                    <div class="p-6 flex flex-col flex-grow">
                         <h4 class="text-2xl font-bold text-gray-900 mb-2">Computer Number Systems</h4>
-                        <p class="text-gray-600 text-sm mb-4">
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">
                             A program that simplifies converting from one base to another.
                         </p>
-                        <a href="Computer Number Systems/computernumbersystems.html" class="inline-block bg-indigo-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-indigo-600 transition-colors duration-300">Launch Converter</a>
+                        <div class="mt-auto">
+                            <a href="Computer Number Systems/computernumbersystems.html" class="inline-block bg-indigo-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-indigo-600 transition-colors duration-300">Launch Converter</a>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col">
-                    <img src="https://placehold.co/600x400/00979C/FFFFFF?text=Arduino:+Dino+Jump" alt="Arduino Dino Jump Game" class="w-full h-48 object-cover">
-                    <div class="p-6 flex flex-col justify-between flex-grow">
-                        <div>
-                            <h4 class="text-2xl font-bold text-gray-900 mb-2">Arduino: Dino Jump</h4>
-                            <p class="text-gray-600 text-sm mb-4">
-                                A basic dino jump game where you control a dinosaur character to jump over obstacles, all running on an Arduino.
-                            </p>
-                        </div>
-                        <div class="mt-4">
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col h-full">
+                    <img src="Images/DinoJumpImage.png" alt="Arduino Dino Jump Game" class="w-full h-96 object-cover bg-gray-200">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-2xl font-bold text-gray-900 mb-2">Arduino: Dino Jump</h4>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">
+                            A basic dino jump game where you control a dinosaur character to jump over obstacles, all running on an Arduino.
+                        </p>
+                        <div class="mt-auto">
                             <a href="Arduino/Arduino Dino Jump/DinoJump.html" class="inline-block bg-indigo-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-indigo-600 transition-colors duration-300">View Project Details</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col">
-                    <img src="https://placehold.co/600x400/00878F/FFFFFF?text=Arduino:+Binary" alt="Arduino Binary Converter" class="w-full h-48 object-cover">
-                    <div class="p-6 flex flex-col justify-between flex-grow">
-                        <div>
-                            <h4 class="text-2xl font-bold text-gray-900 mb-2">Arduino: Binary</h4>
-                            <p class="text-gray-600 text-sm mb-4">
-                                A line of lights that displays binary numbers. It converts a base-10 number typed into a remote and shows the result using the LEDs.
-                            </p>
-                        </div>
-                        <div class="mt-4">
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col h-full">
+                    <img src="Images/BinaryLightsImage.png" alt="Arduino Binary Converter" class="w-full h-96 object-cover bg-gray-200">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-2xl font-bold text-gray-900 mb-2">Arduino: Binary</h4>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">
+                            A line of lights that displays binary numbers. It converts a base-10 number typed into a remote and shows the result using the LEDs.
+                        </p>
+                        <div class="mt-auto">
                             <a href="Arduino/Arduino Binary Lights/BinaryLights.html" class="inline-block bg-indigo-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-indigo-600 transition-colors duration-300">View Project Details</a>
                         </div>
                     </div>
                 </div>
-                
-                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col">
-                    <img src="https://placehold.co/600x400/FACC15/1F2937?text=Machine+Learning:\nBoston+Housing" alt="Machine Learning: Boston Housing" class="w-full h-48 object-cover">
-                    <div class="p-6 flex flex-col justify-between flex-grow">
-                        <div>
-                            <h4 class="text-2xl font-bold text-gray-900 mb-2">Machine Learning: Boston Housing</h4>
-                            <p class="text-gray-600 text-sm mb-4">
-                                A machine learning model predicting housing prices in Boston based on various features.
-                            </p>
-                        </div>
-                        <div class="mt-4">
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col h-full">
+                    <img src="Images/BostonHousingImage.png" alt="Machine Learning: Boston Housing" class="w-full h-96 object-cover bg-gray-200">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-2xl font-bold text-gray-900 mb-2">Machine Learning: Boston Housing</h4>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">
+                            A machine learning model predicting housing prices in Boston based on various features.
+                        </p>
+                        <div class="mt-auto">
                             <a href="Machine Learning/Machine Learning Boston Housing/BostonHousing.html" class="inline-block bg-indigo-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-indigo-600 transition-colors duration-300">View Project Details</a>
                         </div>
                     </div>
                 </div>
-                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col">
-                    <img src="https://placehold.co/600x400/FACC15/1F2937?text=Machine+Learning:\nEnergy+Efficiency" alt="Machine Learning: Energy Efficiency" class="w-full h-48 object-cover">
-                    <div class="p-6 flex flex-col justify-between flex-grow">
-                        <div>
-                            <h4 class="text-2xl font-bold text-gray-900 mb-2">Machine Learning: Energy Efficiency</h4>
-                            <p class="text-gray-600 text-sm mb-4">
-                                A model developed to predict the energy efficiency of buildings based on their design parameters.
-                            </p>
-                        </div>
-                        <div class="mt-4">
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col h-full">
+                    <img src="Images/EnergyEfficiencyImage.png" alt="Machine Learning: Energy Efficiency" class="w-full h-96 object-cover bg-gray-200">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-2xl font-bold text-gray-900 mb-2">Machine Learning: Energy Efficiency</h4>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">
+                            A model developed to predict the energy efficiency of buildings based on their design parameters.
+                        </p>
+                        <div class="mt-auto">
                             <a href="Machine Learning/Machine Learning Energy Efficiency/EnergyEfficiency.html" class="inline-block bg-indigo-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-indigo-600 transition-colors duration-300">View Project Details</a>
                         </div>
                     </div>
                 </div>
+                
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col h-full">
+                    <img src="Images/BowlingStatsImage.png" alt="Bergen County Bowling Stats" class="w-full h-96 object-cover bg-gray-200">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-2xl font-bold text-gray-900 mb-2">Bowling Stats Tracker</h4>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">
+                            A website for coaches and players to track high school bowling stats for the Bergen County Big North division.
+                        </p>
+                        <div class="mt-auto">
+                            <a href="INSERT_WEBSITE_LINK_HERE" target="_blank" class="inline-block bg-indigo-500 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-indigo-600 transition-colors duration-300">Visit Website</a>
+                        </div>
+                    </div>
                 </div>
+
+            </div>
         </div>
     </section>
 
