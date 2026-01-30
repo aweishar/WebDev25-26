@@ -3,23 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Andrew Weishar | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <script>
         tailwind.config = {
             darkMode: 'class', 
             theme: {
                 extend: {
-                    // This ensures we are using 'neutral' colors for the true grey look
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
                     colors: {
-                        gray: {
-                            900: '#171717', // neutral-900
-                            800: '#262626', // neutral-800
-                            700: '#404040', // neutral-700
+                        // Custom neutral palette for a premium feel
+                        neutral: {
+                            850: '#1f2937', // Cool gray/slate tone
+                            900: '#111827', 
+                            950: '#030712', 
+                        },
+                        brand: {
+                            500: '#3b82f6', // Strong Royal Blue
+                            600: '#2563eb', // Deeper Blue
+                            700: '#1d4ed8',
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
                         }
                     }
                 }
@@ -28,18 +56,35 @@
     </script>
     
     <style>
+        /* Base styles */
         body {
             font-family: 'Inter', sans-serif;
         }
-        /* Smooth transition for color changes */
-        body, div, nav, a, p, h1, h2, h3, h4, section, button {
-            transition-property: background-color, border-color, color, fill, stroke;
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        
+        /* Smooth transition for theme toggling */
+        body, div, nav, a, p, h1, h2, h3, h4, section, button, span {
+            transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
             transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
             transition-duration: 300ms;
+        }
+
+        /* Gradient Text Utility - Updated to Blue/Cyan/Teal for masculine tech look */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #2563eb, #06b6d4);
+        }
+        .dark .text-gradient {
+            background-image: linear-gradient(to right, #60a5fa, #2dd4bf);
         }
     </style>
 
     <script>
+        // Check local storage or system preference on load
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark')
         } else {
@@ -47,20 +92,24 @@
         }
     </script>
 </head>
-<body class="antialiased bg-white dark:bg-neutral-950 dark:text-neutral-100 transition-colors duration-300">
+<body class="antialiased bg-gray-50 dark:bg-neutral-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
 
-    <header class="bg-white dark:bg-neutral-950 shadow-sm sticky top-0 z-50 border-b dark:border-neutral-800">
-        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#hero" class="text-2xl font-bold text-gray-900 dark:text-white rounded-md p-2 hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors duration-200">Andrew Weishar</a>
+    <!-- Navigation -->
+    <header class="fixed w-full top-0 z-50 bg-white/90 dark:bg-neutral-950/90 backdrop-blur-md border-b border-gray-200 dark:border-neutral-800 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-xl font-bold tracking-tight text-gray-900 dark:text-white hover:opacity-80 transition-opacity">
+                Andrew<span class="text-brand-600 dark:text-brand-500">.dev</span>
+            </a>
             
-            <div class="flex items-center gap-6">
-                <div class="space-x-4 flex hidden md:flex">
-                    <a href="#about" class="text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">About</a>
-                    <a href="#skills" class="text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">Skills</a>
-                    <a href="#projects" class="text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">Projects</a>
+            <div class="flex items-center gap-8">
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-brand-600 dark:hover:text-white transition-colors">About</a>
+                    <a href="#skills" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-brand-600 dark:hover:text-white transition-colors">Skills</a>
+                    <a href="#projects" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-brand-600 dark:hover:text-white transition-colors">Projects</a>
                 </div>
                 
-                <button id="theme-toggle" type="button" class="text-gray-500 dark:text-neutral-400 hover:bg-gray-100 dark:hover:bg-neutral-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-neutral-700 rounded-lg text-sm p-2.5">
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" type="button" class="group p-2 rounded-full bg-gray-100 dark:bg-neutral-800 text-gray-500 dark:text-gray-400 hover:text-brand-600 dark:hover:text-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all">
                     <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
                     <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
                 </button>
@@ -68,222 +117,431 @@
         </nav>
     </header>
 
-    <section id="hero" class="py-20 md:py-32 text-center bg-gray-50 dark:bg-neutral-950">
-        <div class="container mx-auto px-4">
-            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 dark:text-white mb-4">Hello, I'm Andrew Weishar</h1>
-            <p class="text-lg md:text-xl text-gray-600 dark:text-neutral-400 max-w-2xl mx-auto mb-8">
-                A coder who enjoys completing projects with efficient code. 
+    <!-- Hero Section -->
+    <section id="hero" class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-white dark:bg-neutral-950">
+        <!-- Background Decor -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 pointer-events-none">
+            <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 dark:via-neutral-800 to-transparent"></div>
+            <div class="absolute top-20 left-10 w-96 h-96 bg-brand-500/10 dark:bg-brand-500/10 rounded-full blur-[100px]"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 dark:bg-cyan-500/10 rounded-full blur-[100px]"></div>
+        </div>
+
+        <div class="container mx-auto px-6 text-center animate-fade-in">
+            <span class="inline-block py-1 px-3 rounded-full bg-gray-100 dark:bg-neutral-800 text-gray-700 dark:text-gray-300 text-sm font-semibold mb-6 border border-gray-200 dark:border-neutral-700 animate-slide-up">
+                High School Portfolio
+            </span>
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-6 animate-slide-up" style="animation-delay: 100ms;">
+                Hello, I'm <br class="md:hidden" />
+                <span class="text-gradient">Andrew Weishar</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed animate-slide-up" style="animation-delay: 200ms;">
+                A developer who crafts efficient code and builds engaging digital experiences.
             </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 animate-slide-up" style="animation-delay: 300ms;">
+                <a href="#projects" class="px-8 py-3.5 rounded-full bg-brand-600 hover:bg-brand-700 text-white font-semibold transition-all shadow-lg shadow-brand-500/25">
+                    View Projects
+                </a>
+                <a href="#about" class="px-8 py-3.5 rounded-full bg-white dark:bg-neutral-900 text-gray-900 dark:text-white border border-gray-200 dark:border-neutral-800 font-semibold hover:bg-gray-50 dark:hover:bg-neutral-800 transition-colors">
+                    More About Me
+                </a>
+            </div>
         </div>
     </section>
 
-    <section id="about" class="py-20 md:py-24 bg-white dark:bg-neutral-900">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">About Me</h2>
-            <div class="max-w-4xl mx-auto text-center md:text-left">
-                <p class="text-gray-700 dark:text-neutral-300 leading-relaxed mb-4">
-                    I am a student whose progressed through all computer science courses offered at the high school level. My journey began with an interest in game development, which quickly grew into a passion for coding. I have worked on a variety of projects, from simple games, to more complex: applications, machine learning programs, Arduino modules, and even web development.
-                </p>
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-gray-50 dark:bg-neutral-900 border-y border-gray-200 dark:border-neutral-800">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="w-full md:w-1/3 flex justify-center">
+                        <div class="relative w-48 h-48 md:w-64 md:h-64 rounded-full bg-white dark:bg-neutral-800 overflow-hidden shadow-2xl ring-4 ring-gray-100 dark:ring-neutral-700">
+                            <!-- Placeholder for Profile Image -->
+                            <div class="w-full h-full flex items-center justify-center text-gray-300 dark:text-neutral-600 bg-gray-100 dark:bg-neutral-800">
+                                <i data-lucide="user" class="w-24 h-24"></i>
+                            </div>
+                            <!-- <img src="your-photo.jpg" alt="Andrew Weishar" class="w-full h-full object-cover"> -->
+                        </div>
+                    </div>
+                    <div class="w-full md:w-2/3 text-center md:text-left">
+                        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">About Me</h2>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg mb-6">
+                            I am a student who has progressed through all computer science courses offered at the high school level. My journey began with an interest in game development, which quickly grew into a passion for coding. 
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
+                            I have worked on a variety of projects, ranging from simple games to complex applications, machine learning programs, Arduino modules, and web development.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     
-    <section id="skills" class="py-20 md:py-24 bg-gray-50 dark:bg-neutral-950">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-12">Skills</h2>
-            <div class="max-w-3xl mx-auto flex flex-wrap justify-center items-center gap-6">
-                <div class="bg-white dark:bg-neutral-800 rounded-full py-2 px-6 shadow-md text-gray-700 dark:text-neutral-200 font-medium">Java</div>
-                <div class="bg-white dark:bg-neutral-800 rounded-full py-2 px-6 shadow-md text-gray-700 dark:text-neutral-200 font-medium">HTML</div>
-                <div class="bg-white dark:bg-neutral-800 rounded-full py-2 px-6 shadow-md text-gray-700 dark:text-neutral-200 font-medium">CSS</div>
-                <div class="bg-white dark:bg-neutral-800 rounded-full py-2 px-6 shadow-md text-gray-700 dark:text-neutral-200 font-medium">JavaScript</div>
-                <div class="bg-white dark:bg-neutral-800 rounded-full py-2 px-6 shadow-md text-gray-700 dark:text-neutral-200 font-medium">C++</div>
-                <div class="bg-white dark:bg-neutral-800 rounded-full py-2 px-6 shadow-md text-gray-700 dark:text-neutral-200 font-medium">Python</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="py-20 md:py-24 bg-white dark:bg-neutral-900">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">Projects</h2>
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 bg-white dark:bg-neutral-950">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-16">Technical Skills</h2>
             
-            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 mt-12">Honors '23-24</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
-                <div class="bg-gray-50 dark:bg-neutral-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col h-full">
-                    <img src="Images/BrickBreakerImage.png" alt="Brick Breaker Game" class="w-full h-96 object-cover bg-gray-200 dark:bg-neutral-700">
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h4 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Brick Breaker</h4>
-                        <p class="text-gray-600 dark:text-neutral-400 text-sm mb-4 flex-grow">
-                            A nostalgic arcade-style game where players must break bricks by bouncing a ball off a paddle, but it has been frozen! Can you clear the board?
-                        </p>
-                        <div class="mt-auto">
-                            <a href="Games/Brick Breaker/brickbreaker.html" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white text-sm font-semibold py-2 px-4 rounded-full transition-colors duration-300">Play Game</a>
-                        </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-5xl mx-auto">
+                <!-- Skill Card Component -->
+                <div class="bg-gray-50 dark:bg-neutral-900 p-6 rounded-xl text-center group border border-gray-100 dark:border-neutral-800 hover:border-brand-500/30 dark:hover:border-brand-500/30 transition-all duration-300">
+                    <div class="mb-4 text-gray-500 dark:text-gray-400 group-hover:text-brand-600 dark:group-hover:text-brand-400 group-hover:scale-110 transition-all duration-300 flex justify-center">
+                        <i data-lucide="coffee" class="w-8 h-8"></i>
                     </div>
-                </div>
-                <div class="bg-gray-50 dark:bg-neutral-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col h-full">
-                    <img src="Images/SpaceInvadersImage.png" alt="Space Invaders Game" class="w-full h-96 object-cover bg-gray-200 dark:bg-neutral-700">
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h4 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Space Invaders</h4>
-                        <p class="text-gray-600 dark:text-neutral-400 text-sm mb-4 flex-grow">
-                            A remake of the classic arcade shooter, now in a titanic edition with enhanced features and challenging levels.
-                        </p>
-                        <div class="mt-auto">
-                            <a href="Games/Space Invaders/spaceinvaders.html" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white text-sm font-semibold py-2 px-4 rounded-full transition-colors duration-300">Play Game</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Advanced Placement '24-25</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
-                <div class="bg-gray-50 dark:bg-neutral-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col h-full">
-                    <img src="Images/SnakeGameImage.png" alt="Snake" class="w-full h-96 object-cover bg-gray-200 dark:bg-neutral-700">
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h4 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Snake</h4>
-                        <p class="text-gray-600 dark:text-neutral-400 text-sm mb-4 flex-grow">
-                            A classic arcade game where you control a snake to eat food and grow, all while avoiding collisions with walls or your own tail. 
-                        </p>
-                        <div class="mt-auto">
-                            <a href="Games/Snake/snake.html" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white text-sm font-semibold py-2 px-4 rounded-full transition-colors duration-300">Play Game</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-gray-50 dark:bg-neutral-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col h-full">
-                    <img src="Images/2playerSnakeImage.png" alt="2-Player Snake" class="w-full h-96 object-cover bg-gray-200 dark:bg-neutral-700">
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h4 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">2-Player Snake</h4>
-                        <p class="text-gray-600 dark:text-neutral-400 text-sm mb-4 flex-grow">
-                            A two-player spin-off of the classic game. In this version, you must avoid the spoiled apples as you collaborate on beating your high score!
-                        </p>
-                        <div class="mt-auto">
-                            <a href="Games/2-Player Snake/2playersnake.html" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white text-sm font-semibold py-2 px-4 rounded-full transition-colors duration-300">Play Game</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-gray-50 dark:bg-neutral-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col h-full">
-                    <img src="Images/DiscoJumpImage.png" alt="Disco Jump Game" class="w-full h-96 object-cover bg-gray-200 dark:bg-neutral-700">
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h4 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Disco Jump</h4>
-                        <p class="text-gray-600 dark:text-neutral-400 text-sm mb-4 flex-grow">
-                            A vibrant, high-energy arcade game where you jump from platform to platform, ascending higher and higher. It's a disco-themed version of the classic endless jumper game.
-                        </p>
-                        <div class="mt-auto">
-                            <a href="Games/Disco Jump/discojump.html" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white text-sm font-semibold py-2 px-4 rounded-full transition-colors duration-300">Play Game</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-gray-50 dark:bg-neutral-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col h-full">
-                    <img src="Images/LightsOutImage.png" alt="Lights Out Game" class="w-full h-96 object-cover bg-gray-200 dark:bg-neutral-700">
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h4 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Lights Out</h4>
-                        <p class="text-gray-600 dark:text-neutral-400 text-sm mb-4 flex-grow">
-                            A classic puzzle game where you turn off all the lights. Clicking a tile flips its state and the state of its orthogonal neighbors. Can you solve it in the fewest moves?
-                        </p>
-                        <div class="mt-auto">
-                            <a href="Games/Lights Out/lightsout.html" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white text-sm font-semibold py-2 px-4 rounded-full transition-colors duration-300">Play Game</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Advanced Topics '25-26</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
-                <div class="bg-gray-50 dark:bg-neutral-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col h-full">
-                    <img src="Images/WhatTheHexImage.png" alt="What The Hex?" class="w-full h-96 object-cover bg-gray-200 dark:bg-neutral-700">
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h4 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">What The Hex?</h4>
-                        <p class="text-gray-600 dark:text-neutral-400 text-sm mb-4 flex-grow">
-                            A hex code color guessing game. 
-                        </p>
-                        <div class="mt-auto">
-                            <a href="What The Hex/whatthehex.html" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white text-sm font-semibold py-2 px-4 rounded-full transition-colors duration-300">Play Game</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-gray-50 dark:bg-neutral-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col h-full">
-                    <img src="Images/ComputerNumberSystemsImage.png" alt="Computer Number Systems" class="w-full h-96 object-cover bg-gray-200 dark:bg-neutral-700">
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h4 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Computer Number Systems</h4>
-                        <p class="text-gray-600 dark:text-neutral-400 text-sm mb-4 flex-grow">
-                            A program that simplifies converting from one base to another.
-                        </p>
-                        <div class="mt-auto">
-                            <a href="Computer Number Systems/computernumbersystems.html" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white text-sm font-semibold py-2 px-4 rounded-full transition-colors duration-300">Launch Converter</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-gray-50 dark:bg-neutral-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col h-full">
-                    <img src="Images/DinoJumpImage.png" alt="Arduino Dino Jump Game" class="w-full h-96 object-cover bg-gray-200 dark:bg-neutral-700">
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h4 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Arduino: Dino Jump</h4>
-                        <p class="text-gray-600 dark:text-neutral-400 text-sm mb-4 flex-grow">
-                            A basic dino jump game where you control a dinosaur character to jump over obstacles, all running on an Arduino.
-                        </p>
-                        <div class="mt-auto">
-                            <a href="Arduino/Arduino Dino Jump/DinoJump.html" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white text-sm font-semibold py-2 px-4 rounded-full transition-colors duration-300">View Project Details</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-gray-50 dark:bg-neutral-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col h-full">
-                    <img src="Images/BinaryLightsImage.png" alt="Arduino Binary Converter" class="w-full h-96 object-cover bg-gray-200 dark:bg-neutral-700">
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h4 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Arduino: Binary</h4>
-                        <p class="text-gray-600 dark:text-neutral-400 text-sm mb-4 flex-grow">
-                            A line of lights that displays binary numbers. It converts a base-10 number typed into a remote and shows the result using the LEDs.
-                        </p>
-                        <div class="mt-auto">
-                            <a href="Arduino/Arduino Binary Lights/BinaryLights.html" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white text-sm font-semibold py-2 px-4 rounded-full transition-colors duration-300">View Project Details</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-gray-50 dark:bg-neutral-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col h-full">
-                    <img src="Images/BostonHousingImage.png" alt="Machine Learning: Boston Housing" class="w-full h-96 object-cover bg-gray-200 dark:bg-neutral-700">
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h4 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Machine Learning: Boston Housing</h4>
-                        <p class="text-gray-600 dark:text-neutral-400 text-sm mb-4 flex-grow">
-                            A machine learning model predicting housing prices in Boston based on various features.
-                        </p>
-                        <div class="mt-auto">
-                            <a href="Machine Learning/Machine Learning Boston Housing/BostonHousing.html" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white text-sm font-semibold py-2 px-4 rounded-full transition-colors duration-300">View Project Details</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-gray-50 dark:bg-neutral-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col h-full">
-                    <img src="Images/EnergyEfficiencyImage.png" alt="Machine Learning: Energy Efficiency" class="w-full h-96 object-cover bg-gray-200 dark:bg-neutral-700">
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h4 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Machine Learning: Energy Efficiency</h4>
-                        <p class="text-gray-600 dark:text-neutral-400 text-sm mb-4 flex-grow">
-                            A model developed to predict the energy efficiency of buildings based on their design parameters.
-                        </p>
-                        <div class="mt-auto">
-                            <a href="Machine Learning/Machine Learning Energy Efficiency/EnergyEfficiency.html" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white text-sm font-semibold py-2 px-4 rounded-full transition-colors duration-300">View Project Details</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-gray-50 dark:bg-neutral-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col h-full">
-                    <img src="Images/BowlingStatsImage.png" alt="Bergen County Bowling Stats" class="w-full h-96 object-cover bg-gray-200 dark:bg-neutral-700">
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h4 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Bowling Stats Tracker</h4>
-                        <p class="text-gray-600 dark:text-neutral-400 text-sm mb-4 flex-grow">
-                            A website for coaches and players to track high school bowling stats for the Bergen County Big North division.
-                        </p>
-                        <div class="mt-auto">
-                            <a href="INSERT_WEBSITE_LINK_HERE" target="_blank" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white text-sm font-semibold py-2 px-4 rounded-full transition-colors duration-300">Visit Website</a>
-                        </div>
-                    </div>
+                    <h3 class="font-semibold text-gray-900 dark:text-white">Java</h3>
                 </div>
 
+                <div class="bg-gray-50 dark:bg-neutral-900 p-6 rounded-xl text-center group border border-gray-100 dark:border-neutral-800 hover:border-brand-500/30 dark:hover:border-brand-500/30 transition-all duration-300">
+                    <div class="mb-4 text-gray-500 dark:text-gray-400 group-hover:text-brand-600 dark:group-hover:text-brand-400 group-hover:scale-110 transition-all duration-300 flex justify-center">
+                        <i data-lucide="file-code" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 dark:text-white">HTML</h3>
+                </div>
+
+                <div class="bg-gray-50 dark:bg-neutral-900 p-6 rounded-xl text-center group border border-gray-100 dark:border-neutral-800 hover:border-brand-500/30 dark:hover:border-brand-500/30 transition-all duration-300">
+                    <div class="mb-4 text-gray-500 dark:text-gray-400 group-hover:text-brand-600 dark:group-hover:text-brand-400 group-hover:scale-110 transition-all duration-300 flex justify-center">
+                        <i data-lucide="palette" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 dark:text-white">CSS</h3>
+                </div>
+
+                <div class="bg-gray-50 dark:bg-neutral-900 p-6 rounded-xl text-center group border border-gray-100 dark:border-neutral-800 hover:border-brand-500/30 dark:hover:border-brand-500/30 transition-all duration-300">
+                    <div class="mb-4 text-gray-500 dark:text-gray-400 group-hover:text-brand-600 dark:group-hover:text-brand-400 group-hover:scale-110 transition-all duration-300 flex justify-center">
+                        <i data-lucide="brackets" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 dark:text-white">JavaScript</h3>
+                </div>
+
+                <div class="bg-gray-50 dark:bg-neutral-900 p-6 rounded-xl text-center group border border-gray-100 dark:border-neutral-800 hover:border-brand-500/30 dark:hover:border-brand-500/30 transition-all duration-300">
+                    <div class="mb-4 text-gray-500 dark:text-gray-400 group-hover:text-brand-600 dark:group-hover:text-brand-400 group-hover:scale-110 transition-all duration-300 flex justify-center">
+                        <i data-lucide="terminal" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 dark:text-white">C++</h3>
+                </div>
+
+                <div class="bg-gray-50 dark:bg-neutral-900 p-6 rounded-xl text-center group border border-gray-100 dark:border-neutral-800 hover:border-brand-500/30 dark:hover:border-brand-500/30 transition-all duration-300">
+                    <div class="mb-4 text-gray-500 dark:text-gray-400 group-hover:text-brand-600 dark:group-hover:text-brand-400 group-hover:scale-110 transition-all duration-300 flex justify-center">
+                        <i data-lucide="code-2" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 dark:text-white">Python</h3>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-gray-800 dark:bg-black text-white py-8 border-t dark:border-neutral-900">
-        <div class="container mx-auto px-4 text-center text-sm text-gray-400">
-            <p>&copy; 2025 Andrew Weishar. All Rights Reserved.</p>
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-gray-50 dark:bg-neutral-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Featured Projects</h2>
+                <p class="text-gray-500 dark:text-gray-400 max-w-xl mx-auto">A collection of my work ranging from game development to machine learning models.</p>
+            </div>
+
+            <!-- Honors Category -->
+            <div class="mb-20">
+                <div class="flex items-center gap-4 mb-8">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">Honors '23-24</h3>
+                    <div class="h-px bg-gray-200 dark:bg-neutral-800 flex-grow"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="group bg-white dark:bg-neutral-950 rounded-2xl overflow-hidden border border-gray-200 dark:border-neutral-800 hover:border-brand-300 dark:hover:border-brand-800 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <div class="relative overflow-hidden aspect-video bg-gray-100 dark:bg-neutral-900">
+                            <!-- Fallback for image -->
+                            <div class="absolute inset-0 flex items-center justify-center text-gray-400 dark:text-neutral-700">
+                                <i data-lucide="gamepad-2" class="w-12 h-12"></i>
+                            </div>
+                            <img src="Images/BrickBreakerImage.png" onerror="this.style.display='none'" alt="Brick Breaker Game" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-8">
+                            <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">Brick Breaker</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
+                                A nostalgic arcade-style game where players must break bricks by bouncing a ball off a paddle. Includes multiple levels and power-ups.
+                            </p>
+                            <a href="Games/Brick Breaker/brickbreaker.html" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors">
+                                Play Game <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="group bg-white dark:bg-neutral-950 rounded-2xl overflow-hidden border border-gray-200 dark:border-neutral-800 hover:border-brand-300 dark:hover:border-brand-800 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <div class="relative overflow-hidden aspect-video bg-gray-100 dark:bg-neutral-900">
+                            <div class="absolute inset-0 flex items-center justify-center text-gray-400 dark:text-neutral-700">
+                                <i data-lucide="rocket" class="w-12 h-12"></i>
+                            </div>
+                            <img src="Images/SpaceInvadersImage.png" onerror="this.style.display='none'" alt="Space Invaders Game" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-8">
+                            <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">Space Invaders</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
+                                A remake of the classic arcade shooter, now in a titanic edition with enhanced features, challenging levels, and smooth mechanics.
+                            </p>
+                            <a href="Games/Space Invaders/spaceinvaders.html" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors">
+                                Play Game <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AP Category -->
+            <div class="mb-20">
+                <div class="flex items-center gap-4 mb-8">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">Advanced Placement '24-25</h3>
+                    <div class="h-px bg-gray-200 dark:bg-neutral-800 flex-grow"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Project Card 3 -->
+                    <div class="group bg-white dark:bg-neutral-950 rounded-2xl overflow-hidden border border-gray-200 dark:border-neutral-800 hover:border-brand-300 dark:hover:border-brand-800 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <div class="relative overflow-hidden aspect-video bg-gray-100 dark:bg-neutral-900">
+                            <div class="absolute inset-0 flex items-center justify-center text-gray-400 dark:text-neutral-700">
+                                <i data-lucide="move" class="w-12 h-12"></i>
+                            </div>
+                            <img src="Images/SnakeGameImage.png" onerror="this.style.display='none'" alt="Snake" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-8">
+                            <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">Snake</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
+                                A classic arcade game where you control a snake to eat food and grow, all while avoiding collisions with walls or your own tail.
+                            </p>
+                            <a href="Games/Snake/snake.html" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors">
+                                Play Game <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 4 -->
+                    <div class="group bg-white dark:bg-neutral-950 rounded-2xl overflow-hidden border border-gray-200 dark:border-neutral-800 hover:border-brand-300 dark:hover:border-brand-800 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <div class="relative overflow-hidden aspect-video bg-gray-100 dark:bg-neutral-900">
+                            <div class="absolute inset-0 flex items-center justify-center text-gray-400 dark:text-neutral-700">
+                                <i data-lucide="users" class="w-12 h-12"></i>
+                            </div>
+                            <img src="Images/2playerSnakeImage.png" onerror="this.style.display='none'" alt="2-Player Snake" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-8">
+                            <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">2-Player Snake</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
+                                A two-player spin-off of the classic game. In this version, you must avoid the spoiled apples as you collaborate on beating your high score!
+                            </p>
+                            <a href="Games/2-Player Snake/2playersnake.html" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors">
+                                Play Game <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 5 -->
+                    <div class="group bg-white dark:bg-neutral-950 rounded-2xl overflow-hidden border border-gray-200 dark:border-neutral-800 hover:border-brand-300 dark:hover:border-brand-800 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <div class="relative overflow-hidden aspect-video bg-gray-100 dark:bg-neutral-900">
+                            <div class="absolute inset-0 flex items-center justify-center text-gray-400 dark:text-neutral-700">
+                                <i data-lucide="music" class="w-12 h-12"></i>
+                            </div>
+                            <img src="Images/DiscoJumpImage.png" onerror="this.style.display='none'" alt="Disco Jump" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-8">
+                            <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">Disco Jump</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
+                                A vibrant, high-energy arcade game where you jump from platform to platform. It's a disco-themed version of the classic endless jumper game.
+                            </p>
+                            <a href="Games/Disco Jump/discojump.html" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors">
+                                Play Game <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 6 -->
+                    <div class="group bg-white dark:bg-neutral-950 rounded-2xl overflow-hidden border border-gray-200 dark:border-neutral-800 hover:border-brand-300 dark:hover:border-brand-800 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <div class="relative overflow-hidden aspect-video bg-gray-100 dark:bg-neutral-900">
+                            <div class="absolute inset-0 flex items-center justify-center text-gray-400 dark:text-neutral-700">
+                                <i data-lucide="lightbulb-off" class="w-12 h-12"></i>
+                            </div>
+                            <img src="Images/LightsOutImage.png" onerror="this.style.display='none'" alt="Lights Out" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-8">
+                            <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">Lights Out</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
+                                A classic puzzle game where you turn off all the lights. Clicking a tile flips its state and its neighbors. Can you solve it efficiently?
+                            </p>
+                            <a href="Games/Lights Out/lightsout.html" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors">
+                                Play Game <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Topics Category -->
+            <div class="mb-8">
+                <div class="flex items-center gap-4 mb-8">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">Advanced Topics '25-26</h3>
+                    <div class="h-px bg-gray-200 dark:bg-neutral-800 flex-grow"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                    
+                    <!-- Advanced Card 1 -->
+                    <div class="group bg-white dark:bg-neutral-950 rounded-2xl overflow-hidden border border-gray-200 dark:border-neutral-800 hover:border-brand-300 dark:hover:border-brand-800 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <div class="relative overflow-hidden aspect-video bg-gray-100 dark:bg-neutral-900">
+                            <div class="absolute inset-0 flex items-center justify-center text-gray-400 dark:text-neutral-700">
+                                <i data-lucide="hexagon" class="w-12 h-12"></i>
+                            </div>
+                            <img src="Images/WhatTheHexImage.png" onerror="this.style.display='none'" alt="What The Hex?" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-8">
+                            <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">What The Hex?</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
+                                A hex code color guessing game designed to test your knowledge of digital color values.
+                            </p>
+                            <a href="What The Hex/whatthehex.html" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors">
+                                Play Game <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Advanced Card 2 -->
+                    <div class="group bg-white dark:bg-neutral-950 rounded-2xl overflow-hidden border border-gray-200 dark:border-neutral-800 hover:border-brand-300 dark:hover:border-brand-800 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <div class="relative overflow-hidden aspect-video bg-gray-100 dark:bg-neutral-900">
+                            <div class="absolute inset-0 flex items-center justify-center text-gray-400 dark:text-neutral-700">
+                                <i data-lucide="binary" class="w-12 h-12"></i>
+                            </div>
+                            <img src="Images/ComputerNumberSystemsImage.png" onerror="this.style.display='none'" alt="Number Converter" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-8">
+                            <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">Number Systems</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
+                                A comprehensive utility program that simplifies converting values between different base systems.
+                            </p>
+                            <a href="Computer Number Systems/computernumbersystems.html" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors">
+                                Launch Converter <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Advanced Card 3 (Arduino Dino) -->
+                    <div class="group bg-white dark:bg-neutral-950 rounded-2xl overflow-hidden border border-gray-200 dark:border-neutral-800 hover:border-brand-300 dark:hover:border-brand-800 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <div class="relative overflow-hidden aspect-video bg-gray-100 dark:bg-neutral-900">
+                            <div class="absolute inset-0 flex items-center justify-center text-gray-400 dark:text-neutral-700">
+                                <i data-lucide="cpu" class="w-12 h-12"></i>
+                            </div>
+                            <img src="Images/DinoJumpImage.png" onerror="this.style.display='none'" alt="Arduino Dino Jump" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-8">
+                            <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">Arduino: Dino Jump</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
+                                A hardware-based implementation of the dino jump game where you control a character to jump over obstacles using Arduino.
+                            </p>
+                            <a href="Arduino/Arduino Dino Jump/DinoJump.html" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors">
+                                View Project <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Advanced Card 4 (Arduino Binary Lights) -->
+                    <div class="group bg-white dark:bg-neutral-950 rounded-2xl overflow-hidden border border-gray-200 dark:border-neutral-800 hover:border-brand-300 dark:hover:border-brand-800 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <div class="relative overflow-hidden aspect-video bg-gray-100 dark:bg-neutral-900">
+                            <div class="absolute inset-0 flex items-center justify-center text-gray-400 dark:text-neutral-700">
+                                <i data-lucide="lightbulb" class="w-12 h-12"></i>
+                            </div>
+                            <img src="Images/BinaryLightsImage.png" onerror="this.style.display='none'" alt="Arduino Binary Lights" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-8">
+                            <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">Arduino: Binary</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
+                                A line of lights that displays binary numbers. It converts a base-10 number typed into a remote and shows the result using the LEDs.
+                            </p>
+                            <a href="Arduino/Arduino Binary Lights/BinaryLights.html" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors">
+                                View Project <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Advanced Card 5 (ML Boston) -->
+                    <div class="group bg-white dark:bg-neutral-950 rounded-2xl overflow-hidden border border-gray-200 dark:border-neutral-800 hover:border-brand-300 dark:hover:border-brand-800 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <div class="relative overflow-hidden aspect-video bg-gray-100 dark:bg-neutral-900">
+                            <div class="absolute inset-0 flex items-center justify-center text-gray-400 dark:text-neutral-700">
+                                <i data-lucide="brain-circuit" class="w-12 h-12"></i>
+                            </div>
+                            <img src="Images/BostonHousingImage.png" onerror="this.style.display='none'" alt="ML Boston Housing" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-8">
+                            <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">ML: Boston Housing</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
+                                A machine learning model predicting housing prices in Boston based on various socioeconomic features.
+                            </p>
+                            <a href="Machine Learning/Machine Learning Boston Housing/BostonHousing.html" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors">
+                                View Project <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Advanced Card 6 (ML Energy) -->
+                    <div class="group bg-white dark:bg-neutral-950 rounded-2xl overflow-hidden border border-gray-200 dark:border-neutral-800 hover:border-brand-300 dark:hover:border-brand-800 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <div class="relative overflow-hidden aspect-video bg-gray-100 dark:bg-neutral-900">
+                            <div class="absolute inset-0 flex items-center justify-center text-gray-400 dark:text-neutral-700">
+                                <i data-lucide="zap" class="w-12 h-12"></i>
+                            </div>
+                            <img src="Images/EnergyEfficiencyImage.png" onerror="this.style.display='none'" alt="ML Energy Efficiency" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-8">
+                            <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">ML: Energy Efficiency</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
+                                A model developed to predict the energy efficiency of buildings based on their design parameters.
+                            </p>
+                            <a href="Machine Learning/Machine Learning Energy Efficiency/EnergyEfficiency.html" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors">
+                                View Project <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Advanced Card 7 (StrikeMaster) -->
+                    <div class="group bg-white dark:bg-neutral-950 rounded-2xl overflow-hidden border border-gray-200 dark:border-neutral-800 hover:border-brand-300 dark:hover:border-brand-800 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <div class="relative overflow-hidden aspect-video bg-gray-100 dark:bg-neutral-900">
+                            <div class="absolute inset-0 flex items-center justify-center text-gray-400 dark:text-neutral-700">
+                                <i data-lucide="trophy" class="w-12 h-12"></i>
+                            </div>
+                            <img src="Images/BowlingStatsImage.png" onerror="this.style.display='none'" alt="StrikeMaster" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-8">
+                            <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">StrikeMaster</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
+                                A website for coaches and players to track high school bowling stats for the Bergen County Big North division.
+                            </p>
+                            <a href="#" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors">
+                                Visit Website <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-neutral-950 border-t border-gray-200 dark:border-neutral-900 pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-10">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-2xl font-bold text-gray-900 dark:text-white">Andrew<span class="text-brand-600 dark:text-brand-500">.dev</span></span>
+                    <p class="text-gray-500 dark:text-gray-400 mt-2 text-sm">Building digital experiences, one line at a time.</p>
+                </div>
+                <div class="flex gap-6">
+                    <a href="https://github.com/aweishar" class="text-gray-400 hover:text-brand-600 dark:hover:text-white transition-colors"><i data-lucide="github" class="w-6 h-6"></i></a>
+                    <a href="https://www.linkedin.com/in/YOURNAME" class="text-gray-400 hover:text-brand-600 dark:hover:text-white transition-colors"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                    <a href="mailto:aweishar27@pascack.org" class="text-gray-400 hover:text-brand-600 dark:hover:text-white transition-colors"><i data-lucide="mail" class="w-6 h-6"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-gray-100 dark:border-neutral-900 pt-8 text-center md:text-left text-sm text-gray-400">
+                <p>&copy; 2025 Andrew Weishar. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
     <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Theme Toggle Logic
         var themeToggleBtn = document.getElementById('theme-toggle');
         var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
         var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
