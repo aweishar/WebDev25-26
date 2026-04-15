@@ -149,17 +149,29 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-24 bg-gray-50 dark:bg-neutral-900 border-y border-gray-200 dark:border-neutral-800">
-    <div class="w-full md:w-2/3 mx-auto text-center">
-        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">About Me</h2>
-        <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg mb-6">
-            I am a student who has progressed through all computer science courses offered at the high school level. My journey began with an interest in game development, which quickly grew into a passion for coding. 
-        </p>
-        <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
-            I have worked on a variety of projects, ranging from simple games to complex applications, machine learning programs, Arduino modules, and web development.
-        </p>
-    </div>
+<!-- About Section -->
+    <section id="about" class="py-24 relative overflow-hidden bg-white/60 dark:bg-neutral-900/60 backdrop-blur-lg border-y border-white/20 dark:border-neutral-700/30">
+        <!-- Subtle divider -->
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-200 dark:via-neutral-800 to-transparent"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Glassmorphism Card for About Content -->
+            <div class="w-full md:w-3/4 lg:w-2/3 mx-auto text-center bg-gray-50 dark:bg-neutral-950 border border-gray-200/60 dark:border-neutral-800/60 p-10 md:p-16 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.1)] relative">
+                
+                <!-- Decorative quote icon -->
+                <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-brand-500 to-cyan-500 rounded-full flex items-center justify-center shadow-lg shadow-brand-500/30 text-white">
+                    <i data-lucide="user" class="w-6 h-6"></i>
+                </div>
+
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-8 mt-2">About Me</h2>
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg mb-6 font-medium">
+                    I am a student who has progressed through all computer science courses offered at the high school level. My journey began with an interest in game development, which quickly grew into a passion for coding. 
+                </p>
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg font-medium">
+                    I have worked on a variety of projects, ranging from simple games to complex applications, machine learning programs, Arduino modules, and web development.
+                </p>
+            </div>
+        </div>
     </section>  
     
     <!-- Skills Section -->
@@ -247,7 +259,7 @@
                         </div>
 
                         <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                            Placed <span class="font-semibold text-gray-900 dark:text-white">26th out of 503 teams</span> overall and <span class="font-semibold text-gray-900 dark:text-white">9th out of 66 schools</span> in the Garden State Capture the Flag competition, a statewide cybersecurity challenge testing skills in cryptography, reverse engineering, web exploitation, forensics, and more.
+                            Finalized and placed <span class="font-semibold text-gray-900 dark:text-white">26th out of 503 teams</span> overall and <span class="font-semibold text-gray-900 dark:text-white">9th out of 66 schools</span> in the Garden State Capture the Flag competition, a statewide cybersecurity challenge testing skills in cryptography, reverse engineering, web exploitation, forensics, and more.
                         </p>
 
                         <div class="flex flex-wrap justify-center md:justify-start gap-3">
