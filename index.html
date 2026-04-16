@@ -165,7 +165,7 @@
 
                 <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-8 mt-2">About Me</h2>
                 <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg mb-6 font-medium">
-                    I am a student who has progressed through all computer science courses offered at the high school level. My journey began with an interest in game development, which quickly grew into a passion for coding. 
+                    I am a student from New Jersey who has progressed through all computer science classes offered at the high school level. My journey began with an interest in game development, which quickly grew into a passion for coding. 
                 </p>
                 <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg font-medium">
                     I have worked on a variety of projects, ranging from simple games to complex applications, machine learning programs, Arduino modules, and web development.
@@ -223,119 +223,159 @@
 <section id="achievements" class="py-24 bg-gray-50 dark:bg-neutral-900 border-y border-gray-200 dark:border-neutral-800">
     <div class="container mx-auto px-6">
         <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Achievements</h2>
-            <p class="text-gray-500 dark:text-gray-400 max-w-xl mx-auto">Competitions and recognition beyond the classroom.</p>
+            <!-- ... existing code ... -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Achievements</h2>
+                <p class="text-gray-500 dark:text-gray-400 max-w-xl mx-auto">Competitions and recognition beyond the classroom.</p>
+            </div>
+
+            <!-- CTF Cards Container -->
+            <div class="max-w-4xl mx-auto space-y-8">
+                
+                <!-- Garden State CTF Card -->
+                <div class="ctf-card relative bg-white dark:bg-neutral-950 rounded-2xl overflow-hidden border border-gray-200 dark:border-neutral-900/50 p-8 md:p-10 shadow-md transition-all hover:shadow-lg">
+                    <!-- Subtle background pattern for the top achievement -->
+                    <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.06] pointer-events-none" style="background-image: radial-gradient(circle, #2563eb 1px, transparent 1px); background-size: 28px 28px;"></div>
+                    
+                    <div class="relative flex flex-col md:flex-row items-center md:items-start gap-8">
+                        <!-- Rank Badge -->
+                        <div class="flex-shrink-0 flex flex-col items-center gap-3">
+                            <div class="relative flex items-center justify-center mt-1">
+                                <div class="ping-slow absolute w-28 h-28 rounded-full bg-brand-500/20 dark:bg-brand-500/30"></div>
+                                <div class="absolute w-28 h-28 rounded-full border-2 border-brand-500/30 dark:border-brand-500/40 border-dashed"></div>
+                                <div class="relative z-10 w-24 h-24 bg-brand-50 dark:bg-brand-900/40 rounded-full flex items-center justify-center border-4 border-white dark:border-neutral-950 shadow-md">
+                                    <div class="text-center">
+                                        <span class="block text-3xl font-black text-brand-600 dark:text-brand-400 leading-none">9th</span>
+                                        <span class="block text-[11px] font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mt-1">Place</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="text-xs font-semibold text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-brand-900/30 px-3 py-1 rounded-full whitespace-nowrap">In The State</span>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="flex-1 text-center md:text-left">
+                            <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+                                <i data-lucide="trophy" class="w-6 h-6 text-brand-500"></i>
+                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Garden State CTF</h3>
+                            </div>
+                            <div class="mb-5 border-l-2 border-brand-500/30 pl-3 ml-1 md:ml-0 md:border-l-0 md:pl-0">
+                                <p class="text-sm text-gray-600 dark:text-gray-400 font-medium">Hosted by the NJCCIC, CYBER.ORG, and Garden State Cyber</p>
+                                <p class="text-xs text-gray-500 dark:text-gray-500 italic mt-0.5">Finals hosted at The College of New Jersey (TCNJ)</p>
+                            </div>
+                            <ul class="space-y-3 text-gray-600 dark:text-gray-300 text-sm md:text-base text-left">
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5"></i>
+                                    <span>Secured <strong class="text-gray-900 dark:text-white">9th place out of 503 competing teams</strong> in an annual, highly competitive statewide cybersecurity challenge.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5"></i>
+                                    <span>Advanced to the in-person finals at TCNJ, demonstrating strong problem-solving capabilities and practical knowledge of offensive and defensive security concepts.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JerseyCTF Card -->
+                <div class="ctf-card relative bg-white dark:bg-neutral-950 rounded-2xl overflow-hidden border border-gray-200 dark:border-neutral-900/50 p-8 md:p-10 shadow-md transition-all hover:shadow-lg">
+                    <!-- Subtle background pattern for the top achievement -->
+                    <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.06] pointer-events-none" style="background-image: radial-gradient(circle, #2563eb 1px, transparent 1px); background-size: 28px 28px;"></div>
+                    
+                    <div class="relative flex flex-col md:flex-row items-center md:items-start gap-8">
+                        <!-- Rank Badge -->
+                        <div class="flex-shrink-0 flex flex-col items-center gap-3">
+                            <div class="relative flex items-center justify-center mt-1">
+                                <div class="ping-slow absolute w-28 h-28 rounded-full bg-brand-500/20 dark:bg-brand-500/30"></div>
+                                <div class="absolute w-28 h-28 rounded-full border-2 border-brand-500/30 dark:border-brand-500/40 border-dashed"></div>
+                                <div class="relative z-10 w-24 h-24 bg-brand-50 dark:bg-brand-900/40 rounded-full flex items-center justify-center border-4 border-white dark:border-neutral-950 shadow-md">
+                                    <div class="text-center">
+                                        <span class="block text-3xl font-black text-brand-600 dark:text-brand-400 leading-none">Xth</span>
+                                        <span class="block text-[11px] font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mt-1">Place</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="text-xs font-semibold text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-brand-900/30 px-3 py-1 rounded-full whitespace-nowrap">In The World</span>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="flex-1 text-center md:text-left">
+                            <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+                                <i data-lucide="trophy" class="w-6 h-6 text-brand-500"></i>
+                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">JerseyCTF</h3>
+                            </div>
+                            <div class="mb-5 border-l-2 border-brand-500/30 pl-3 ml-1 md:ml-0 md:border-l-0 md:pl-0">
+                                <p class="text-sm text-gray-600 dark:text-gray-400 font-medium">Hosted by NJIT NICC, NJIT ACM Chapter, and the Secure Computing Initiative (SCI)</p>
+                                <p class="text-xs text-gray-500 dark:text-gray-500 italic mt-0.5">Finals hosted at The College of New Jersey (TCNJ)</p>
+                            </div>
+                            <ul class="space-y-3 text-gray-600 dark:text-gray-300 text-sm md:text-base text-left">
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5"></i>
+                                    <span>Secured <strong class="text-gray-900 dark:text-white">Xth place out of X competing teams</strong> in an annual, highly competitive global cybersecurity challenge.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5"></i>
+                                    <span>Gained practical, hands-on experience in a simulated real-world cyber environment, collaborating to solve challenges.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PCWA High School CTF Card -->
+                <div class="ctf-card relative bg-white dark:bg-neutral-950 rounded-2xl overflow-hidden border border-gray-200 dark:border-neutral-900/50 p-8 md:p-10 shadow-md transition-all hover:shadow-lg">
+                    <!-- Subtle background pattern for the top achievement -->
+                    <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.06] pointer-events-none" style="background-image: radial-gradient(circle, #2563eb 1px, transparent 1px); background-size: 28px 28px;"></div>
+                    
+                    <div class="relative flex flex-col md:flex-row items-center md:items-start gap-8">
+                        <!-- Rank Badge -->
+                        <div class="flex-shrink-0 flex flex-col items-center gap-3">
+                            <div class="relative flex items-center justify-center mt-1">
+                                <div class="ping-slow absolute w-28 h-28 rounded-full bg-brand-500/20 dark:bg-brand-500/30"></div>
+                                <div class="absolute w-28 h-28 rounded-full border-2 border-brand-500/30 dark:border-brand-500/40 border-dashed"></div>
+                                <div class="relative z-10 w-24 h-24 bg-brand-50 dark:bg-brand-900/40 rounded-full flex items-center justify-center border-4 border-white dark:border-neutral-950 shadow-md">
+                                    <div class="text-center">
+                                        <span class="block text-3xl font-black text-brand-600 dark:text-brand-400 leading-none">Xth</span>
+                                        <span class="block text-[11px] font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mt-1">Place</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="text-xs font-semibold text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-brand-900/30 px-3 py-1 rounded-full whitespace-nowrap">In The Nation</span>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="flex-1 text-center md:text-left">
+                            <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+                                <i data-lucide="trophy" class="w-6 h-6 text-brand-500"></i>
+                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">PCWA High School CTF</h3>
+                            </div>
+                            <div class="mb-5 border-l-2 border-brand-500/30 pl-3 ml-1 md:ml-0 md:border-l-0 md:pl-0">
+                                <p class="text-sm text-gray-600 dark:text-gray-400 font-medium">Hosted by the PA Cyber Workforce Alliance at IUP</p>
+                                <p class="text-xs text-gray-500 dark:text-gray-500 italic mt-0.5">Funding provided by the National Institute of Standards and Technology (NIST)</p>
+                            </div>
+                            <ul class="space-y-3 text-gray-600 dark:text-gray-300 text-sm md:text-base text-left">
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5"></i>
+                                    <span>Secured <strong class="text-gray-900 dark:text-white">Xth place out of X competing teams</strong> in a rigorous, NIST-funded cybersecurity event focused on testing technical agility and analytical thinking.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5"></i>
+                                    <span>Showcased foundational security knowledge by successfully analyzing and solving complex, progressive cybersecurity puzzles against a competitive field of peers.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-
-        <!-- Garden State CTF Section -->
-        <div class="max-w-3xl mx-auto">
-            <div class="ctf-card relative bg-white dark:bg-neutral-950 rounded-2xl overflow-hidden border border-gray-200 dark:border-neutral-800 p-8 md:p-10 shadow-sm">
-
-                <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.06] pointer-events-none" style="background-image: radial-gradient(circle, #2563eb 1px, transparent 1px); background-size: 28px 28px;"></div>
-
-                <div class="relative flex flex-col md:flex-row items-center md:items-start gap-8">
-
-                    <div class="flex-shrink-0 flex flex-col items-center gap-3">
-                        <div class="relative flex items-center justify-center mt-1">
-                            <div class="ping-slow absolute w-28 h-28 rounded-full bg-brand-500/20 dark:bg-brand-500/30"></div>
-                            <div class="absolute w-28 h-28 rounded-full border-2 border-brand-500/30 dark:border-brand-400/30"></div>
-                            <div class="relative w-24 h-24 rounded-full bg-gradient-to-br from-brand-600 to-cyan-500 flex flex-col items-center justify-center shadow-xl shadow-brand-500/30 border border-white/20">
-                                <span class="text-white font-black text-3xl leading-none tracking-tight">#9</span>
-                                <div class="w-8 h-[2px] bg-white/40 rounded-full my-1.5"></div>
-                                <span class="text-white/95 text-[12px] font-bold uppercase tracking-widest leading-none mt-0.5">team</span>
-                            </div>
-                        </div>
-                        <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-brand-900/30 px-3 py-1 rounded-full border border-brand-200 dark:border-brand-800 mt-1">
-                            Top 5%
-                        </span>
-                    </div>
-
-                    <div class="flex-1 text-center md:text-left">
-                        <div class="flex flex-col md:flex-row md:items-center gap-3 mb-3">
-                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Garden State CTF</h3>
-                            <span class="self-center md:self-auto inline-block px-3 py-1 rounded-full bg-gray-100 dark:bg-neutral-800 text-gray-600 dark:text-gray-400 text-xs font-semibold border border-gray-200 dark:border-neutral-700">
-                                Cybersecurity
-                            </span>
-                        </div>
-
-                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                            Finalized and placed <span class="font-semibold text-gray-900 dark:text-white">26th out of 503 teams</span> overall and <span class="font-semibold text-gray-900 dark:text-white">9th out of 66 schools</span> in the Garden State Capture the Flag competition, a statewide cybersecurity challenge testing skills in cryptography, reverse engineering, web exploitation, forensics, and more.
-                        </p>
-
-                        <div class="flex flex-wrap justify-center md:justify-start gap-3">
-                            <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-50 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700">
-                                <i data-lucide="trophy" class="w-4 h-4 text-brand-500 flex-shrink-0"></i>
-                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Top 10 Team</span>
-                            </div>
-                            <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-50 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700">
-                                <i data-lucide="users" class="w-4 h-4 text-brand-500 flex-shrink-0"></i>
-                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">503 Total Teams</span>
-                            </div>
-                            <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-50 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700">
-                                <i data-lucide="map-pin" class="w-4 h-4 text-brand-500 flex-shrink-0"></i>
-                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">New Jersey</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
- 
-        <div class="h-12 md:h-16"></div>
-
-        <!-- Jersey CTF Section -->
-        <div class="max-w-3xl mx-auto">
-            <div class="ctf-card relative bg-white dark:bg-neutral-950 rounded-2xl overflow-hidden border border-gray-200 dark:border-neutral-800 p-8 md:p-10 shadow-sm">
-
-                <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.06] pointer-events-none" style="background-image: radial-gradient(circle, #2563eb 1px, transparent 1px); background-size: 28px 28px;"></div>
-
-                <div class="relative flex flex-col md:flex-row items-center md:items-start gap-8">
-
-                    <div class="flex-shrink-0 flex flex-col items-center gap-3">
-                        <div class="relative flex items-center justify-center mt-1">
-                            <div class="ping-slow absolute w-28 h-28 rounded-full bg-brand-500/20 dark:bg-brand-500/30"></div>
-                            <div class="absolute w-28 h-28 rounded-full border-2 border-brand-500/30 dark:border-brand-400/30"></div>
-                            <div class="relative w-24 h-24 rounded-full bg-gradient-to-br from-brand-600 to-cyan-500 flex flex-col items-center justify-center shadow-xl shadow-brand-500/30 border border-white/20">
-                                <span class="text-white font-black text-3xl leading-none tracking-tight">#X</span>
-                                <div class="w-8 h-[2px] bg-white/40 rounded-full my-1.5"></div>
-                                <span class="text-white/95 text-[12px] font-bold uppercase tracking-widest leading-none mt-0.5">team</span>
-                            </div>
-                        </div>
-                        <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-brand-900/30 px-3 py-1 rounded-full border border-brand-200 dark:border-brand-800 mt-1">
-                            Top X%
-                        </span>
-                    </div>
-
-                    <div class="flex-1 text-center md:text-left">
-                        <div class="flex flex-col md:flex-row md:items-center gap-3 mb-3">
-                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Jersey CTF</h3>
-                            <span class="self-center md:self-auto inline-block px-3 py-1 rounded-full bg-gray-100 dark:bg-neutral-800 text-gray-600 dark:text-gray-400 text-xs font-semibold border border-gray-200 dark:border-neutral-700">
-                                Cybersecurity
-                            </span>
-                        </div>
-
-                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                            Placed <span class="font-semibold text-gray-900 dark:text-white">Xth out of X teams</span> overall in the Jersey CTF competition, a worldwide cybersecurity challenge testing skills in cryptography, reverse engineering, web exploitation, forensics, and more.
-                        </p>
-
-                        <div class="flex flex-wrap justify-center md:justify-start gap-3">
-                            <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-50 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700">
-                                <i data-lucide="trophy" class="w-4 h-4 text-brand-500 flex-shrink-0"></i>
-                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Top X Team</span>
-                            </div>
-                            <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-50 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700">
-                                <i data-lucide="users" class="w-4 h-4 text-brand-500 flex-shrink-0"></i>
-                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">X Total Teams</span>
-                            </div>
-                            <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-50 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700">
-                                <i data-lucide="map-pin" class="w-4 h-4 text-brand-500 flex-shrink-0"></i>
-                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Global</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </div>
-    </section>
+    
+    <script>
+        lucide.createIcons();
+    </script>
+    </body>
+    </html>
+</section>
 
     <!-- Projects Section -->
     <section id="projects" class="py-24 bg-white dark:bg-neutral-950">
